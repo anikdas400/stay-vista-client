@@ -5,7 +5,7 @@ import Footer from "../components/shared/Footer";
 
 const Main = () => {
     return (
-        <div>
+        <div className="bg-neutral-200">
             <Navbar></Navbar>
             <div className='pt-24 min-h-[calc(100vh-68px)]'>
             <Outlet></Outlet>

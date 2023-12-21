@@ -5,15 +5,19 @@ import { Link } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 
 
+
 const MenuDropdown = () => {
     const [isOpen, setIsOpen] = useState(false)
-      const { user } = useAuth()
+    const { user } = useAuth()
+
     return (
+
+
         <div className='relative'>
             <div className='flex flex-row items-center gap-3'>
                 {/* Become A Host btn */}
                 <div className='hidden md:block'>
-                    <button className='disabled:cursor-not-allowed cursor-pointer hover:bg-neutral-100 py-3 px-4 text-base font-semibold rounded-full  transition'>
+                    <button className='disabled:cursor-not-allowed cursor-pointer  hover:bg-neutral-100 py-3 px-4 text-base font-semibold rounded-full  transition'>
                         Host your home
                     </button>
                 </div>
@@ -30,8 +34,8 @@ const MenuDropdown = () => {
                             referrerPolicy='no-referrer'
                             src={user && user.photoURL ? user.photoURL : avatarImg}
                             alt='profile'
-                            height='30'
-                            width='30'
+                            height='40'
+                            width='40'
                         />
                     </div>
                 </div>
@@ -62,6 +66,7 @@ const MenuDropdown = () => {
                 </div>
             )}
         </div>
+
     );
 };
 
